@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_c11_thursday/ui/home/home_screen.dart';
+import 'package:islami_c11_thursday/ui/home/tabs/quran_tab/quran_details/quran_deatial_screen.dart';
 import 'package:islami_c11_thursday/ui/splash_screen/splash_screen.dart';
 
 void main() {
@@ -16,8 +17,15 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashScreen.routeName: (_) => SplashScreen(),
         HomeScreen.routeName: (_) => HomeScreen(),
+        QuranDetailsScreen.routeName: (_) => QuranDetailsScreen(),
       },
       theme: ThemeData(
+        cardTheme: CardTheme(
+            color: Colors.white,
+            elevation: 20,
+            margin: EdgeInsets.all(12),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(22))),
         appBarTheme: AppBarTheme(
             backgroundColor: Colors.transparent,
             centerTitle: true,
@@ -37,6 +45,12 @@ class MyApp extends StatelessWidget {
         ),
       ),
       darkTheme: ThemeData(
+        cardTheme: CardTheme(
+            color: Colors.white,
+            elevation: 20,
+            margin: EdgeInsets.all(12),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(22))),
         appBarTheme: AppBarTheme(
             backgroundColor: Colors.transparent,
             centerTitle: true,
